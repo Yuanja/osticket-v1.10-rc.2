@@ -27,6 +27,7 @@ define('CLIENTINC_DIR',INCLUDE_DIR.'client/');
 define('OSTCLIENTINC',TRUE);
 
 define('ASSETS_PATH',ROOT_PATH.'assets/default/');
+define('LAWATCH_WORKS_ASSETS_PATH',ROOT_PATH.'assets/lawatchworks/');
 
 //Check the status of the HelpDesk.
 if (!in_array(strtolower(basename($_SERVER['SCRIPT_NAME'])), array('logo.php','file.php'))
