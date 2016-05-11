@@ -11,15 +11,25 @@
 "/Users/jyuan/Documents/eku/osticket/upload/"
 
 Add the text under <VirtualHost> stanza:
+
     Alias /osticket/ /Users/jyuan/Documents/eku/osticket/upload/
+    
     <Directory "/Users/jyuan/Documents/eku/osticket/upload/">
+    
         Options Indexes
+    
         DirectoryIndex index.php
+    
         AllowOverride None
+    
         Order allow,deny
+    
         Allow from all
+    
         Require all granted
+    
     </Directory>
+    
 5) restart apache 'sudo apachectl restart'
 
 6) Now logon to your mysql instance: mysql -u root -p 
