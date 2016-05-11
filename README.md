@@ -11,30 +11,19 @@
 "/Users/jyuan/Documents/eku/osticket/upload/"
 
 Add the text under <VirtualHost> stanza:
-
     Alias /osticket/ /Users/jyuan/Documents/eku/osticket/upload/
-
     <Directory "/Users/jyuan/Documents/eku/osticket/upload/">
-
         Options Indexes
-
         DirectoryIndex index.php
-
         AllowOverride None
-
         Order allow,deny
-
         Allow from all
-
         Require all granted
-
     </Directory>
-
 5) restart apache 'sudo apachectl restart'
 
 6) Now logon to your mysql instance: mysql -u root -p 
 
 7) Create a database called osticket: create database osticket
 
-8) point the browser to http://localhost/osticket and installation page will show up.  Follow the instructions in the wizard and when 
-it's prompting you for database connection information just ensure the instance is called "osticket" and user name password is root/{whatever ur passwd is}
+8) point the browser to http://localhost/osticket and installation page will show up.  Follow the instructions in the wizard and when it's prompting you for database connection information just ensure the instance is called "osticket" and user name password is root/{whatever ur passwd is}
