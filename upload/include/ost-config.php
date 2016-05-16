@@ -30,10 +30,10 @@ if(OSTINSTALLED!=TRUE){
 }
 
 # Encrypt/Decrypt secret key - randomly generated during installation.
-define('SECRET_SALT','LH0mY_5tVaXzLtp1w2dOX00CvP03BjVX');
+define('SECRET_SALT','FohbrfOP6GEa6=NOWxJt5JCg7fGAlih6');
 
 #Default admin email. Used only on db connection issues and related alerts.
-define('ADMIN_EMAIL','yuanja@hotmail.com');
+define('ADMIN_EMAIL','mr.gene.kim@gmail.com');
 
 # Database Options
 # ---------------------------------------------------
@@ -42,7 +42,7 @@ define('DBTYPE','mysql');
 define('DBHOST','localhost');
 define('DBNAME','osticket');
 define('DBUSER','root');
-define('DBPASS','password');
+define('DBPASS','oa;5t>HE.t44');
 
 # Table prefix
 define('TABLE_PREFIX','ost_');

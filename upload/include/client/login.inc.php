@@ -15,55 +15,56 @@ if ($content) {
 }
 
 ?>
-
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--no-desktop-drawer-button">
-      <div class="mdl-layout__header-row">
+      <div class="mdl-layout-header">
         <div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button"><i class="material-icons"></i></div>
-        <span class="title mdl-layout-title">
-          <img class="logo-image" src="<?php echo LAWATCH_WORKS_ASSETS_PATH; ?>images/wwLogo.png">
-        </span>
-        <!-- Add spacer, to align navigation to the right in desktop -->
-        <div class="header-spacer mdl-layout-spacer"></div>
-        <!-- Navigation -->
-        <div class="navigation-container">
-          <nav>
-            <ul>
-              <li>
-                <a href="#">Item 1</a>
-              </li>
-              <li>
-                <a href="#">Item 2</a>
-              </li>
-              <li>
-                <a href="#">Item 3</a>
-              </li>
-            </ul>
+        <div class="mdl-layout__header-row">
+          <span class="title mdl-layout-title">
+            <img class="logo-image" src="<?php echo LAWATCH_WORKS_ASSETS_PATH; ?>images/wwLogo.png">
+          </span>
+          <!-- Add spacer, to align navigation to the right in desktop -->
+          <div class="header-spacer mdl-layout-spacer"></div>
+          <!-- Navigation -->
+          <div class="navigation-container">
+            <nav>
+              <ul>
+                <li>
+                  <a href="#">Item 1</a>
+                </li>
+                <li>
+                  <a href="#">Item 2</a>
+                </li>
+                <li>
+                  <a href="#">Item 3</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="mdl-layout__drawer">
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">Item 1</a>
+            <a class="mdl-navigation__link" href="">Item 2</a>
+            <a class="mdl-navigation__link" href="">Item 3</a>
           </nav>
         </div>
       </div>
-      <div class="mdl-layout__drawer">
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="">Item 1</a>
-          <a class="mdl-navigation__link" href="">Item 2</a>
-          <a class="mdl-navigation__link" href="">Item 3</a>
-        </nav>
-      </div>
-      <div class="mdl-layout mdl-js-layout">
+      
       	<main class="mdl-layout__content">
       		<div class="mdl-card">
-      			<div class="mdl-card__title">
+      			<div class="mdl-card__title"> 
       				<h2 class="mdl-card__title-text">Sign In</h2>
       			</div>
       	  		<div class="mdl-card__supporting-text">
       				<form action="login.php" method="post" id="clientLogin">
       				<?php csrf_token(); ?>
       					<div class="mdl-textfield mdl-js-textfield">
+                  <label class="mdl-textfield__label" for="username">Email or Username</label>
       						<input class="mdl-textfield__input" type="text" id="username" value="<?php echo $email; ?>" />
-      						<label class="mdl-textfield__label" for="username">Email or Username</label>
       					</div>
       					<div class="mdl-textfield mdl-js-textfield">
+                  <label class="mdl-textfield__label" for="userpass">Password</label>
       						<input class="mdl-textfield__input" type="password" id="userpass" value="<?php echo $passwd; ?>" />
-      						<label class="mdl-textfield__label" for="userpass">Password</label>
       					</div>
       				
       			</div>
@@ -73,7 +74,6 @@ if ($content) {
       			</form>
       		</div>
       	</main>
-      </div>
         
         <footer class="mdl-mega-footer">
           <div class="footer">
