@@ -1,7 +1,7 @@
 // NAV DROPDOWN
 $(function () {
-  $('nav li ul').hide().removeClass('fallback');
-  $('nav li').hover(
+  $('.user ul.fallback').hide();
+  $('.user').hover(
     function () {
       $('ul', this).stop().slideDown(100);
     },

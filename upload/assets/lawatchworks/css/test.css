@@ -3,16 +3,20 @@ a {
   text-decoration:none;
 }
 .mdl-layout-header {
-  background:#000;
+  background:#1f1f1f;
+}
+.userBar {
+  position: relative;
+  background: #000;
+  height: 22px;
+  padding:0;
 }
 .mdl-layout__header-row {
     height: 87px;
     padding: 0 16px;
+    position:relative;
 }
-.mdl-grid {
-  padding:0;
-  margin:40px auto 0;
-}
+
 .mdl-card {
     margin: auto;
 }
@@ -28,6 +32,27 @@ a {
 .title {
   text-transform:uppercase;
 }
+.user {
+  color:#fff;
+  width:1190px;
+  margin:0 auto;
+  position:relative;
+}
+
+a.dd {
+  float: right;
+  background-image: url('../images/Triangle1.svg');
+  background-size: 13px;
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-right: 20px;
+  color: #fff;
+  font-weight: 100;
+  font-size: 12px;
+}
+.fallback {position:absolute;right:0;}
+/*.user:hover ul.fallback {display:block;float:right;}*/
+
 nav {background:#FFF;float:left;}
 nav ul {text-align:center;margin:0;}
 nav ul li {float:left;display:inline;}
@@ -39,12 +64,24 @@ nav ul li a.dd {
   background-position: right;
   padding-right: 20px;
 }
-nav ul li ul {position:absolute;padding:0;width:auto;min-width:108px;max-width:200px;margin:0 0 0 14px;background:#FFF;border: 1px solid #efefef;z-index:1000;text-align:left;}
-nav ul li ul li {width:auto;float:none;}
-nav ul li ul li a {display:block;padding:15px 10px;color:#444;}
-nav ul li ul li:hover a {background:#F7F7F7;}
-nav ul li ul.fallback {display:none;}
-nav ul li:hover ul.fallback {display:block;}
+.user ul {
+  position:absolute;
+  padding:0;
+  width:auto;
+  margin:0 0 0 14px;
+  background:transparent;
+  top:20px;
+  right:0;
+  list-style:none;
+  font-weight:100;
+  font-size:12px;
+  z-index:1000;
+  text-align:left;}
+.user ul li {width:auto;float:none;}
+.user ul li a {display:block;padding:0;color:#fff;}
+.user ul li:hover a {background:transparent;color:#1f66af;}
+.user ul.fallback {display:none;}
+.user:hover ul.fallback {display:block;}
 
 .mdl-textfield.is-dirty .mdl-textfield__label,
 .mdl-textfield.has-placeholder .mdl-textfield__label,
@@ -52,150 +89,32 @@ nav ul li:hover ul.fallback {display:block;}
     visibility: visible;
     position: absolute;
     top: -3px;
+    color:#000;
 }
 
-input:-webkit-autofill {
+.mdl-textfield__input {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
     border:1px solid #000;
+    text-indent:10px!important;
+    -webkit-input-placeholder {text-indent:10px!important;}
+    -moz-placeholder { text-indent:10px!important;}
+    -moz-placeholder {text-indent:10px!important;}
+    -ms-input-placeholder {text-indent:10px!important;}
+}
+input.mdl-button[type="submit"] {
+  background: #000;
+  color: #fff;
+  padding: 0;
+  width: 300px;
+  margin: 0 auto;
+  font-weight:200;
+  text-transform:none;
 }
 
 .hero-container {
   position:relative;
 }
-.slick-slide img {
-  width:100%;
-}
 
-.slick-arrow {
-  z-index:10;
-  background:#fff;
-  border-radius:25px;
-  height:50px;
-  width:50px;
-}
-.slick-prev {
-    left: 35px;
-}
-.slick-prev:before {
-    content: '<';
-    position: relative;
-    top: -3px;
-}
-.slick-next {
-    right: 40px;
-}
-.slick-next:before {
-    content: '>';
-    position: relative;
-    top: -3px;
-}
-
-.slick-prev:before, .slick-next:before {
-    font-family: 'slick';
-    font-size: 20px;
-    line-height: 1;
-    opacity: 100;
-    color: #000;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-.slick-prev:hover,
-.slick-next:hover,
-.slick-prev:visited,
-.slick-next:visited,
-.slick-prev:focus,
-.slick-next:focus {
-  background:#fff;
-}
-
-.hero-content {
-  padding:0 0 40px;
-  position:absolute;
-  bottom:0;
-  width:100%;
-  z-index:30;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,1+100,0.65+100,1+100 */
-  background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
-}
-.hero-content ul {
-  list-style:none;
-  color:#fff;
-  width: 70%;
-  margin: auto;
-  padding:0;
-}
-.hero-content ul li.info{
-  float:left;
-}
-.hero-content ul li.btns {
-    position: relative;
-    float: right;
-    right: 22px;
-    bottom: -50px;
-    clear: right;
-}
-.hero-content ul li.btns .grey {
-  background:#9e9e9e;
-}
-.values,
-.what-we-do {
-  display: flex;
-  justify-content:space-between;
-  max-width:1068px;
-}
-.values .mdl-cell-12 {
-  margin:16px;
-}
-.values h3 {
-  margin-top:40px;
-}
-.values ul {
-  list-style:none;
-  padding:0;
-  font-size: 28px;
-  line-height: 44px;
-}
-.stack {
-  background:#fff;
-  display:flex;
-  flex-direction:row;
-  flex-wrap: nowrap;;
-  max-width:1068px;
-  padding:20px 0;
-  margin-bottom:90px;
-}
-.greyBkg {
-  background:#f2f2f2;
-  padding:90px 0 0;
-}
-.greyBkg h3 {
-  max-width: 1068px;
-  margin: 0 auto;
-}
-.what-we-do .threeup{
-  background:#fff;
-  width:330px;
-  text-align:center;
-  padding: 0 30px 30px;
-  margin:0;
-}
-.what-we-do .threeup .mdl-card__title{
-  display:inline-block;
-}
-.what-we-do ul {
-  padding:0;
-  list-style:none;
-  display: flex;
-  justify-content: space-around;
-}
-.what-we-do ul li{
-  float:left;
-  width:180px;
-  text-align:center;
-}
 .mdl-card__media {
   background-color:transparent;
   padding: 25px 0 0px;
@@ -203,61 +122,9 @@ input:-webkit-autofill {
 .mdl-card__media img {
   width:126px;
 }
-.who-we-are {
-  display: flex;
-  justify-content:space-around;
-  max-width:1103px;
-}
-.who-we-are .mdl-cell,
-.who-we-are .mdl-card__supporting-text {align-items:center;}
-.who-we-are img {
-  border-radius:63px;
-  -webkit-filter: grayscale(100%);
-  -webkit-transition: .5s ease-in-out;
-  -moz-filter: grayscale(100%); 
-  -moz-transition: .5s ease-in-out;
-  -o-filter: grayscale(100%); 
-  -o-transition: .5s ease-in-out;
-  filter: grayscale(100%);
-}
-.who-we-are img:hover {
-  -webkit-filter: grayscale(0%);
-  -webkit-transition: .2s ease-in-out;
-  -moz-filter: grayscale(0%);
-  -moz-transition: .2s ease-in-out;
-  -o-filter: grayscale(0%);
-  -o-transition: .2s ease-in-out;
-  filter: grayscale(0%);
-} 
-.who-we-are .mdl-card__supporting-text {
-  text-align:center;
-  width:240px;
-  display:inline-block;
-  padding:0;
-}
-.who-we-are .mdl-cell {
-  background:#fff;
-  min-height:300px;
-  width:auto;
-  margin: 0 0 35px;
-  text-align:center;
-}
-.who-we-are h4 {font-size:18px;margin:0;}
-.who-we-are .mdl-typography--subhead {font-size:14px;}
 
 .mdl-card__supporting-text {
   width: auto;
-}
-
-.stack .mdl-col-2 {
-  text-align:center;
-  margin: 16px;
-}
-.stack .mdl-col-2 h2 {
-  display:inherit;
-  font-size:18px;
-  font-weight:700;
-  margin:0 0 10px;
 }
 
 .mdl-mega-footer {
@@ -278,10 +145,10 @@ input:-webkit-autofill {
 
 @media screen and (min-width: 1025px) {
   .mdl-layout--no-desktop-drawer-button .mdl-layout__header-row {
-    background:#000;
     padding-left: 60px;
-    width: 1190px;
+    max-width: 1190px;
     margin:auto;
+    position:relative;
   }
 }
 
@@ -306,50 +173,10 @@ input:-webkit-autofill {
     .hero-content ul {
         display:none;
     }
-  .values .mdl-cell-12 {
-    width: 100%;
-  }
-  .stack {
-    flex-wrap:wrap;
-    margin:0 16px;
-  }
-  .stack .mdl-col-2 {
-      text-align: center;
-      margin: 16px;
-      width: 100%;
-  }
-  .values h3 {
-      margin: 0;
-  }
-  .what-we-do {
-    margin:0;
-  }
-  .what-we-do .threeup{
-    width:100%;
-    margin:10px 15px 16px;
-  }
-  h3#who-we-are  {
-      margin: 40px 0 0 16px;
-  }
 .mdl-cell,
 .who-we-are .mdl-cell {
     width:100%;
     margin: 8px 16px;
-  }
-  .who-we-are {
-    margin:0;
-  }
-  .greyBkg {
-    padding:40px 0 0;
-  }
-  .greyBkg h3 {
-      max-width: 1068px;
-      margin: 0 0 0 16px;
-  }
-  .values ul {
-      padding: 8px;
-      font-size: 21px;
-      margin:0;
   }
   .mdl-mega-footer .footer {
     text-align:center;
@@ -364,36 +191,9 @@ input:-webkit-autofill {
 }
 
 @media (max-width: 479px) {
-  
-  .what-we-do .threeup,
-  .who-we-are .mdl-cell,
-  .stack {
-    width:100%;
-    max-width:90%;
-    margin:10px 15px;
-  }
-  .slick-arrow {
-    z-index:10;
-    background:#fff;
-    border-radius:25px;
-    height:30px;
-    width:30px;
-    opacity:.5;
-  }
-  .slick-prev {
-      left: 15px;
-  }
-  .slick-next {
-      right: 20px;
-  }
-  .slick-next:before {
-      content: '>';
-      position: relative;
-      top: -3px;
-  }
-  .values ul {
-        font-size: 16px;
-  }
+  .mdl-textfield {
+      width: 100%;
+    }
 }
 
 @media only screen 
@@ -404,41 +204,9 @@ input:-webkit-autofill {
     .title {
         left: calc(50% - 85px);
     }
-    .hero-content ul {
-        width: 90%;
-    }
     .mdl-layout__drawer-button {
           display: none;
       }
-    .stack{
-      margin: 18px 16px 0;
-    }
-    .greyBkg {
-      margin: 0;
-    }
-    .greyBkg h3 {
-      margin: 90px 16px 0;
-    }
-    .what-we-do {
-      margin: 40px 16px 0;
-    }
-    h3#what-we-do {
-      margin: 0 0 0 16px;
-    } 
-    .who-we-are {
-      margin: 40px 8px 0;
-    }
-    .what-we-do .threeup {
-        width: 234px;
-        margin: 10px 0;
-    }
-    .who-we-are .mdl-cell {
-        margin: 0 0 18px;
-    }
-    .who-we-are .mdl-card__supporting-text {
-        width: 137px;
-        padding: 0 16px;
-    }
     .mdl-mega-footer .footer {
         width: 708px;
     }
@@ -453,34 +221,6 @@ input:-webkit-autofill {
     .mdl-layout__drawer-button {
           display: none;
       }
-    .stack{
-      margin: 18px 16px 0;
-    }
-    .greyBkg {
-      margin: 0;
-    }
-    .greyBkg h3 {
-      margin: 90px 16px 0;
-    }
-    .what-we-do {
-      margin: 40px 16px 0;
-    }
-    h3#what-we-do {
-      margin: 0 0 0 16px;
-    } 
-    .who-we-are {
-      margin: 40px 8px 0;
-    }
-    .what-we-do .threeup {
-      width:320px;
-    }
-    .who-we-are .mdl-cell {
-        margin: 0 0 18px;
-    }
-    .who-we-are .mdl-card__supporting-text {
-        width: 203px;
-        padding: 0 16px;
-    }
     .mdl-mega-footer .footer {
         width: 970px;
     }

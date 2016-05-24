@@ -18,6 +18,16 @@ if ($content) {
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--no-desktop-drawer-button">
       <div class="mdl-layout-header">
         <div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button"><i class="material-icons"></i></div>
+        <div class="userBar mdl-grid">
+            <span class="user">
+  						<a class="dd" href="#">Kyle Yugawa</a>
+  						<ul class="fallback">
+  							<li><a href="#">Search</a></li>
+  							<li><a href="#">Identity</a></li>
+  							<li><a href="#">Maps</a></li>
+  						</ul>
+            </span>
+        </div>
         <div class="mdl-layout__header-row">
           <span class="title mdl-layout-title">
             <img class="logo-image" src="<?php echo LAWATCH_WORKS_ASSETS_PATH; ?>images/wwLogo.png">
@@ -25,7 +35,7 @@ if ($content) {
           <!-- Add spacer, to align navigation to the right in desktop -->
           <div class="header-spacer mdl-layout-spacer"></div>
           <!-- Navigation -->
-          <div class="navigation-container">
+          <!-- <div class="navigation-container">
             <nav>
               <ul>
                 <li>
@@ -39,7 +49,7 @@ if ($content) {
                 </li>
               </ul>
             </nav>
-          </div>
+          </div> -->
         </div>
         <div class="mdl-layout__drawer">
           <nav class="mdl-navigation">
